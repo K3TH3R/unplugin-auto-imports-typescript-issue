@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "../../dist/out-tsc",
+    "declaration": true,
+    "types": ["node", "vite/client", "./libs/mylib/auto-imports.d.ts"]
+    // "types": ["node", "vite/client", "./auto-imports.d.ts"]
+    // "types": ["node", "vite/client", "auto-imports.d.ts"]
+  },
+  "include": ["src/**/*.ts", "auto-imports.d.ts"],
+  "exclude": ["vite.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"]
+}

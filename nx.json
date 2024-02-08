@@ -28,5 +28,12 @@
         "serveStaticTargetName": "serve-static"
       }
     }
-  ]
+  ],
+  "targetDefaults": {
+    "@nx/vite:build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    }
+  }
 }

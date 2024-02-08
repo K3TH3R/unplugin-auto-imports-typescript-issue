@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@unplugin-auto-imports-private-name/mylib": ["libs/mylib/src/index.ts"],
+      "@unplugin-auto-imports-private-name/mylib2": ["libs/mylib2/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

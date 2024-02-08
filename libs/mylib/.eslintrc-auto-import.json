@@ -1,0 +1,7 @@
+{
+  "globals": {
+    "Cartesian2": true,
+    "TCartesian2": true,
+    "Cartesian3": true
+  }
+}
