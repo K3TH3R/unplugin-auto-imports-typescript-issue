@@ -1,7 +1,5 @@
 /// <reference types='vitest' />
 import { defineConfig } from 'vite';
-import dts from 'vite-plugin-dts';
-import * as path from 'path';
 import AutoImport from 'unplugin-auto-import/vite'
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
@@ -11,10 +9,6 @@ export default defineConfig({
 
   plugins: [
     nxViteTsPaths(),
-    dts({
-      entryRoot: 'src',
-      tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
-    }),
 		AutoImport({
 			imports: [
 				{ cesium: ['Cartesian2', 'Cartesian3', 'Color'] },
