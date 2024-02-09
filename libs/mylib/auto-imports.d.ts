@@ -6,11 +6,13 @@
 export {}
 declare global {
   const Cartesian2: typeof import('cesium')['Cartesian2']
+  const Cartesian3: typeof import('cesium')['Cartesian3']
+  const Color: typeof import('cesium')['Color']
 }
 // for type re-export
 declare global {
   // @ts-ignore
-  export type { Cartesian2 as TCartesian2, Cartesian3 } from 'cesium'
+  export type { Cartesian2 as TCartesian2 } from 'cesium'
   import('cesium')
 }
 // for vue template auto import
@@ -19,11 +21,15 @@ declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly Cartesian2: UnwrapRef<typeof import('cesium')['Cartesian2']>
+    readonly Cartesian3: UnwrapRef<typeof import('cesium')['Cartesian3']>
+    readonly Color: UnwrapRef<typeof import('cesium')['Color']>
   }
 }
 declare module '@vue/runtime-core' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly Cartesian2: UnwrapRef<typeof import('cesium')['Cartesian2']>
+    readonly Cartesian3: UnwrapRef<typeof import('cesium')['Cartesian3']>
+    readonly Color: UnwrapRef<typeof import('cesium')['Color']>
   }
 }

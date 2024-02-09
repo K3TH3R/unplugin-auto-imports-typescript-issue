@@ -17,19 +17,21 @@ export default defineConfig({
     }),
 		AutoImport({
 			imports: [
-				{ cesium: ['Cartesian2'] },
-				{ from: 'cesium', imports: [
-          ['Cartesian2', 'TCartesian2'],
-          'Cartesian3',
-        ],
-          type: true
+				{ cesium: ['Cartesian2', 'Cartesian3', 'Color'] },
+				{
+          from: 'cesium',
+          type: true,
+          imports: [
+            ['Cartesian2', 'TCartesian2'],
+            'Cartesian3',
+          ],
         },
 			],
 			dts: './auto-imports.d.ts',
 			vueTemplate: true,
       eslintrc: {
-        enabled: true, // Default `false`
-        filepath: './libs/mylib/.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
+        enabled: true,
+        filepath: './libs/mylib/.eslintrc-auto-import.json',
         globalsPropValue: true,
       },
 		}),

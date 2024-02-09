@@ -2,7 +2,9 @@
   "name": "@unplugin-auto-imports-private-name/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "yarn nx run mylib:build"
+  },
   "private": true,
   "dependencies": {
     "vue": "3.3.4"
