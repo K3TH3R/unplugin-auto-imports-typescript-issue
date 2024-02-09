@@ -1,45 +1,35 @@
 {
-  "name": "@unplugin-auto-imports-private-name/source",
-  "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {
-    "build": "yarn nx run mylib:build"
-  },
-  "private": true,
-  "dependencies": {
-    "vue": "3.3.4"
-  },
-  "devDependencies": {
-    "@antfu/eslint-config": "2.6.4",
-    "@eslint/eslintrc": "3.0.0",
-    "@eslint/js": "8.48.0",
-    "@nx/eslint": "18.0.3",
-    "@nx/eslint-plugin": "18.0.3",
-    "@nx/js": "18.0.3",
-    "@nx/vite": "18.0.3",
-    "@nx/vue": "18.0.3",
-    "@nx/web": "18.0.3",
-    "@nx/workspace": "18.0.3",
-    "@swc-node/register": "1.8.0",
-    "@swc/core": "1.4.0",
-    "@swc/helpers": "0.5.2",
-    "@types/node": "20.11.17",
-    "@typescript-eslint/eslint-plugin": "6.13.2",
-    "@typescript-eslint/parser": "6.13.2",
-    "@vitejs/plugin-vue": "5.0.3",
-    "@vitest/coverage-v8": "1.0.4",
-    "@vitest/ui": "1.0.4",
-    "@vue/eslint-config-typescript": "12.0.0",
-    "@vue/test-utils": "2.4.1",
-    "cesium": "1.114.0",
-    "eslint": "8.56.0",
-    "eslint-plugin-vue": "9.16.1",
-    "jsdom": "24.0.0",
-    "nx": "18.0.3",
-    "typescript": "5.3.2",
-    "unplugin-auto-import": "0.17.5",
-    "vite": "5.0.0",
-    "vitest": "1.0.4",
-    "vue-tsc": "1.8.8"
-  }
+	"name": "@unplugin-auto-imports-private-name/source",
+	"version": "0.0.0",
+	"private": true,
+	"license": "MIT",
+	"scripts": {
+		"build": "yarn nx run mylib:build"
+	},
+	"dependencies": {
+		"vue": "3.4.17"
+	},
+	"devDependencies": {
+		"@antfu/eslint-config": "2.6.4",
+		"@eslint/eslintrc": "3.0.0",
+		"@nx/eslint": "18.0.3",
+		"@nx/eslint-plugin": "18.0.3",
+		"@nx/js": "18.0.3",
+		"@nx/vite": "18.0.3",
+		"@nx/vue": "18.0.3",
+		"@nx/web": "18.0.3",
+		"@nx/workspace": "18.0.3",
+		"@swc-node/register": "1.8.0",
+		"@swc/core": "1.4.0",
+		"@swc/helpers": "0.5.6",
+		"@types/node": "20.11.17",
+		"@vitejs/plugin-vue": "5.0.3",
+		"cesium": "1.114.0",
+		"eslint": "8.56.0",
+		"nx": "18.0.3",
+		"typescript": "5.3.3",
+		"unplugin-auto-import": "0.17.5",
+		"vite": "5.1.0",
+		"vue-tsc": "1.8.27"
+	}
 }

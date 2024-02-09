@@ -14,7 +14,7 @@ export function mylib() {
 // }
 
 export function mylib3(): TCartographic {
-  return new Cartographic(0, 0, 0)
+	return new Cartographic(0, 0, 0)
 }
 
 /**
@@ -32,7 +32,7 @@ export function mylib3(): TCartographic {
  * - Return type of exported function has or is using private name 'Color'.ts(4060)
  */
 // export function mylib6(): Color {
-//   return new Color(0, 0, 0, 0)
+// 	return new Color(0, 0, 0, 0)
 // }
 
 export function mylib5(): Cartesian4 {
