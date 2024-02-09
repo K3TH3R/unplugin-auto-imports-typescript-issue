@@ -10,7 +10,7 @@ To demonstrate the Type issues:
 5. If you uncomment either of the commented out functions, the build will break due to Type related errors.
 
 ## Where the Confusion Lies
-In the `AutoImport()` within `libs/mylib/vite.config.ts`, I have two auto-imports from Cesium: `Cartesian2` and `Cartesian3` as well as a "type" import for both of these objects. In the case of `Cartesian2`, I'm renaming it to `TCartesian2` to avoid namespace clashes in the autoimports.
+In the `AutoImport()` within `libs/mylib/vite.config.ts`, I have three auto-imports from Cesium: `Cartesian2`, `Cartesian3`, and `Color` as well as a "type" import for the first two of these objects. In the case of `Cartesian2`, I'm renaming it to `TCartesian2` to avoid namespace clashes in the autoimports.
 
 ### Type Aliases
 
@@ -20,14 +20,13 @@ Return type of exported function has or is using private name 'TCartesian2'.ts(4
 ```
 However, if I do this exact same type alias format (`mylib3()`) _without_ global autoimports, it works fine.
 
-
 ### Type Clashes
 In the case of a straight global import of both the function and the type, as shown with `Cartesian3`, I am seeing two TypeScript errors:
 ```
 - Return type of exported function has or is using private name 'Cartesian3'.ts(4060)
 - 'Cartesian3' cannot be used as a value because it was exported using 'export type'.ts(1362)
 ```
- And just to be super sure, I have a second version where I do a global import of the `Color` function with _no auto type import_ which also fails with the following errors: 
+ And just to be super sure, I have a second version where I do a global import of the `Color` function with _no auto type import_ which also fails with the following errors:
 ```
 - 'Color' refers to a value, but is being used as a type here. Did you mean 'typeof Color'?ts(2749)
 - Return type of exported function has or is using private name 'Color'.ts(4060)

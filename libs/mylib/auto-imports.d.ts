@@ -18,7 +18,6 @@ declare global {
 // for vue template auto import
 import { UnwrapRef } from 'vue'
 declare module 'vue' {
-  interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly Cartesian2: UnwrapRef<typeof import('cesium')['Cartesian2']>
     readonly Cartesian3: UnwrapRef<typeof import('cesium')['Cartesian3']>
@@ -26,7 +25,6 @@ declare module 'vue' {
   }
 }
 declare module '@vue/runtime-core' {
-  interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly Cartesian2: UnwrapRef<typeof import('cesium')['Cartesian2']>
     readonly Cartesian3: UnwrapRef<typeof import('cesium')['Cartesian3']>
